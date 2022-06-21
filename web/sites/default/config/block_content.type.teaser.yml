@@ -1,0 +1,10 @@
+uuid: 13f29333-baab-4d56-98c3-eb8f337a8ee7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vqgv8HpytC_jEqlc6zYRSbm7VJnUofW85YGOPzKs-Wg
+id: teaser
+label: Teaser
+revision: 0
+description: 'A teaser to a piece of content, local or external.'

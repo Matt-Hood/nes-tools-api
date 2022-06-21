@@ -1,0 +1,13 @@
+uuid: eedbcf05-3ad3-4169-a55d-517de4657fb0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: XXBDbuSIEk08eOO6GECgE5Rl5kA5IJQT_OOQn7X-hJw
+id: text
+block_id: 'inline_block:text'
+category: content
+label: Text
+weight: -3
+image_path: /modules/contrib/rain_features/modules/rain_blocks/modules/rain_text/images/text.svg
+image_alt: ''

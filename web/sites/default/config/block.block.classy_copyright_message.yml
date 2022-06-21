@@ -1,0 +1,23 @@
+uuid: 3efa8f66-98d5-4f9c-b2d6-e8bffb89fb50
+langcode: en
+status: true
+dependencies:
+  theme:
+    - classy
+_core:
+  default_config_hash: qeenbl13CSGg8H3Y_xLULYB1fk-yY2uwYyrnQEtoH7Q
+id: classy_copyright_message
+theme: classy
+region: sidebar_first
+weight: -11
+provider: null
+plugin: 'block_content:a3349aee-7555-4f06-b1e2-40330b1d933d'
+settings:
+  id: 'block_content:a3349aee-7555-4f06-b1e2-40330b1d933d'
+  label: 'Copyright message'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

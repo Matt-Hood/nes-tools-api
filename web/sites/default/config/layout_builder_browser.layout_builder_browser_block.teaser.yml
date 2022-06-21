@@ -1,0 +1,13 @@
+uuid: 998bdfbc-5981-43d2-a53e-7401600c7398
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j2oghMD3IEPi96yhojauQtOWsh57jw3myMO3Pe2qQ9Y
+id: teaser
+block_id: 'inline_block:teaser'
+category: content
+label: Teaser
+weight: -2
+image_path: /modules/contrib/rain_features/modules/rain_blocks/modules/rain_teaser/images/teaser.svg
+image_alt: ''

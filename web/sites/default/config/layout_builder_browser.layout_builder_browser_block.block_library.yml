@@ -1,0 +1,13 @@
+uuid: f8fce0f4-a0c3-4747-a112-356d872cefd2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: HT7tZRv7D8XTak1Xlr6JSgYmuPmT8IsJK7o3V-DCBRE
+id: block_library
+block_id: 'inline_block:library'
+category: other
+label: 'Block Library'
+weight: -7
+image_path: /modules/contrib/rain_features/modules/rain_blocks/modules/rain_block_library/images/block.svg
+image_alt: null

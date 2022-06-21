@@ -1,0 +1,25 @@
+uuid: b56a9d4f-6311-4c6b-9589-812ef38cc1bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nimbus_theme
+_core:
+  default_config_hash: 4p2SOLCX_3wQX3_HLGnb0A4M30skK3cuUl3M7eGFSPA
+id: sitebranding_footer
+theme: nimbus_theme
+region: footer_left
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

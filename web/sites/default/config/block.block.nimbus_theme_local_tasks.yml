@@ -1,0 +1,29 @@
+uuid: ad241c06-ab52-4c92-ba82-ea5d420fa36d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nimbus_theme
+_core:
+  default_config_hash: sj31SXvt31zYeqecgBwYeTigOWp6PjYY5EBtCnysSEs
+id: nimbus_theme_local_tasks
+theme: nimbus_theme
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user*'
+    negate: false
+    context_mapping: {  }

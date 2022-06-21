@@ -1,0 +1,10 @@
+uuid: b0768ae1-e73b-49e2-a89c-53c0fb0f37ac
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 9asFUDBp4iv32VzsW_Yh2l7oH0r_DifGaE12Gz-x-9M
+name: Authors
+vid: authors
+description: 'Content authors.'
+weight: 0

@@ -1,0 +1,21 @@
+uuid: 26b1259c-97cf-4ae5-940e-b1e4db985d6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.product
+_core:
+  default_config_hash: OWgPutCXK239cS8gLjeGezV3YefIv9ghd88_DbUiG44
+id: node.product.field_summary
+field_name: field_summary
+entity_type: node
+bundle: product
+label: Summary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

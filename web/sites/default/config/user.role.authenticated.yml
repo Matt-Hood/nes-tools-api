@@ -1,0 +1,20 @@
+uuid: b327cdbc-d9d5-4602-be72-9f6cef054c8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - fontawesome
+    - google_analytics
+    - media
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access fontawesome additional settings'
+  - 'opt-in or out of google analytics tracking'
+  - 'view media'

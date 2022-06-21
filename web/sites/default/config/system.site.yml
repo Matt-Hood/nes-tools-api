@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: i8Oylwuti2qBzidXjo9CiSju6_70MCkdoTbLi_MaYv8
+name: Drupal
+mail: admin@example.com
+slogan: ''
+page:
+  403: /node/201
+  404: /node/200
+  front: /node/101
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+uuid: 3f64df13-1a8d-4968-aaf4-bf7e68e83b1b

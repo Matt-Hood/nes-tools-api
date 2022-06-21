@@ -1,0 +1,28 @@
+# This configuration file only contains variables for usage with DDEV-local.
+
+vagrant_hostname: https://hf-toolkit.ddev.site
+
+drupal_composer_install_dir: "/var/www/html"
+drupal_db_user: db
+drupal_db_password: db
+drupal_db_name: db
+drupal_db_host: db
+drupal_mysql_user: db
+drupal_mysql_password: db
+drupal_site_name: "Drupal"
+drupal_install_profile: rain_demo
+drupal_account_name: admin
+drupal_account_pass: admin
+
+command:
+  site:
+    options:
+      env: true
+      multisite: false
+      settings_file: settings.local.php
+
+project_repo: git@github.com:Matt-Hood/hf-toolkit.git
+release_repo: ssh://codeserver.dev.550a8eb0-fa03-48d8-9b33-9c091298a161@codeserver.dev.550a8eb0-fa03-48d8-9b33-9c091298a161.drush.in:2222/~/repository.git
+release_drupal_root: web
+deploy_host: Pantheon
+

@@ -1,0 +1,22 @@
+uuid: 585ade8b-38af-448f-b6f6-18adcef49c5e
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - rain_theme
+_core:
+  default_config_hash: 36vxkrdtNuXmvOajMXKp_P3PckJ5Np7uodPahBGPkxg
+id: rain_theme_messages
+theme: rain_theme
+region: header_top
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

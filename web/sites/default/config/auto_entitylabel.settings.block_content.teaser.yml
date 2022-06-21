@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: FHV4vqCDEdpZxWa3b--HvPO-ZrD3qf74e37EDWSq2Lc
+status: 2
+pattern: 'Teaser: [block_content:field_title]'
+escape: false
+preserve_titles: false
+save: 0
+chunk: '50'
+dependencies:
+  config:
+    - block_content.type.teaser

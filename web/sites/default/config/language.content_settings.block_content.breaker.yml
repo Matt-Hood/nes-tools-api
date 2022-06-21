@@ -1,0 +1,13 @@
+uuid: 95ad8d65-d72f-4c45-b154-676e1b7838b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.breaker
+_core:
+  default_config_hash: rbILO3Q7QwblJlRfxXlldXRUPZ9Vj7vJEwOfQxdm2Js
+id: block_content.breaker
+target_entity_type_id: block_content
+target_bundle: breaker
+default_langcode: site_default
+language_alterable: false

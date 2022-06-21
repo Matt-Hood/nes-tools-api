@@ -1,0 +1,23 @@
+uuid: 64935f31-7e92-4b93-9439-b2950f3264a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_search_api_exclude
+    - node.type.page
+  module:
+    - search_api_exclude_entity
+_core:
+  default_config_hash: tGyCeNWfi0Mpm2G_dIuCnAiBZmFcd4d4NEDr3rIGZ8A
+id: node.page.field_search_api_exclude
+field_name: field_search_api_exclude
+entity_type: node
+bundle: page
+label: 'Search API exclude'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: search_api_exclude_entity

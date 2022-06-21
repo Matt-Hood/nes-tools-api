@@ -1,0 +1,23 @@
+uuid: b6a2904d-60d5-487d-96f0-d3fc19d014c4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - classy
+_core:
+  default_config_hash: qhmtVfyxyPVCrZGaDlUP7WvU0o1C2drKJwz3HxmRRxw
+id: classy_footermessage
+theme: classy
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'block_content:b1c887e9-ccbb-4a35-86dc-04d12c880fac'
+settings:
+  id: 'block_content:b1c887e9-ccbb-4a35-86dc-04d12c880fac'
+  label: 'Footer message'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

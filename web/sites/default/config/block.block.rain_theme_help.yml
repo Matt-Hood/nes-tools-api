@@ -1,0 +1,22 @@
+uuid: 4915c7a6-9faa-4466-8c0f-d9f14f3ce854
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - rain_theme
+_core:
+  default_config_hash: MnIacXBQFBE9-BxFJKw8pEVJqlpd-CANGxkdzrZTCw0
+id: rain_theme_help
+theme: rain_theme
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

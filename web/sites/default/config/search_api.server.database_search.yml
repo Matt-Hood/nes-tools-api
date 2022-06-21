@@ -1,0 +1,19 @@
+uuid: e3b0b66c-fad3-433c-9b93-40b8ec54227d
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+_core:
+  default_config_hash: QtIm_FgWUnm6WdhrbNePU4wwYlPH4Ugx51Dqos5313w
+id: database_search
+name: 'Database Search'
+description: 'Default database search.'
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  partial_matches: false
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

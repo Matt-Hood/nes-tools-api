@@ -1,0 +1,22 @@
+uuid: 2c00eada-2b2d-4bef-b3d8-4346b4826436
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - nimbus_theme
+_core:
+  default_config_hash: ltBGjbxZAbV-d6BnvP-NWMaNghM4YPXqPd04rdsOfxs
+id: nimbus_theme_messages
+theme: nimbus_theme
+region: header_bottom
+weight: -10
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

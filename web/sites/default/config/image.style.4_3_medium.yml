@@ -1,0 +1,17 @@
+uuid: 74ceca9c-f490-4d64-a585-a801f58d9fa2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 3jFT0VSoR479YPOIRoaSdSeKQkxMBabBa85I_xfzuHA
+name: 4_3_medium
+label: '4:3 Medium (640 x 480)'
+effects:
+  40726c34-c520-4222-baf9-646a9570f9a3:
+    uuid: 40726c34-c520-4222-baf9-646a9570f9a3
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 480
+      anchor: center-center

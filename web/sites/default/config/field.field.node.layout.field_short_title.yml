@@ -1,0 +1,21 @@
+uuid: 7a9384d9-33dc-4f3f-80a1-e7cdc1b54b1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_short_title
+    - node.type.layout
+_core:
+  default_config_hash: SgIryvjVBEKJr4aoYysKxDISmZVhEIA1nwudgBa_zuE
+id: node.layout.field_short_title
+field_name: field_short_title
+entity_type: node
+bundle: layout
+label: 'Short title'
+description: 'Optional abbreviated titles for teaser summaries.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

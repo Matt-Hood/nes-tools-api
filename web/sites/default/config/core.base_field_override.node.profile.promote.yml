@@ -1,0 +1,24 @@
+uuid: 25d66558-a717-4136-87c1-41f84ec878f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.profile
+_core:
+  default_config_hash: sxKRsGvxZJ2rBOZH0rk-tTZJvZACuC-FJgrMMRIOqWc
+id: node.profile.promote
+field_name: promote
+entity_type: node
+bundle: profile
+label: 'Promoted to front profile'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

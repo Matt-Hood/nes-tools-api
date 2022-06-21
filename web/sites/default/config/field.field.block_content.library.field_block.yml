@@ -1,0 +1,46 @@
+uuid: 595cae12-6a59-4687-b16b-acb3bc9db459
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion
+    - block_content.type.library
+    - field.storage.block_content.field_block
+_core:
+  default_config_hash: 9AZnIMp89UXBukSOmLjX27gYhWZ3WUThYOC2mcT0R6Q
+id: block_content.library.field_block
+field_name: field_block
+entity_type: block_content
+bundle: library
+label: Block
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      accordion: accordion
+      library: library
+      breaker: breaker
+      card: card
+      card_list: card_list
+      embed: embed
+      form: form
+      gallery: gallery
+      gallery_carousel: gallery_carousel
+      hero: hero
+      views: views
+      map: map
+      media: media
+      quote: quote
+      slider: slider
+      text: text
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: accordion
+field_type: entity_reference

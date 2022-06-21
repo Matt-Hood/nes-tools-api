@@ -1,0 +1,13 @@
+uuid: a4d90105-9816-4422-b830-4e644b3c3bd4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: O7kYtKd8o9El0WRfbYx5GsRxTQm6D-u2tVjHqcGANco
+id: card_list
+block_id: 'inline_block:card_list'
+category: content
+label: 'Card List'
+weight: -2
+image_path: /modules/contrib/rain_features/modules/rain_blocks/modules/rain_card_list/images/card-list.svg
+image_alt: ''

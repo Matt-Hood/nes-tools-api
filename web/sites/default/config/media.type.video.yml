@@ -1,0 +1,17 @@
+uuid: 9e81d32e-e7f9-448a-adb3-06fbe2a2c666
+langcode: en
+status: true
+dependencies:
+  module:
+    - video_embed_media
+_core:
+  default_config_hash: RgDBa_hBMhcl0FDbnn4lCZ8ctA1nP2dc5abr5eOCYJg
+id: video
+label: Video
+description: ''
+source: video_embed_field
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_video_embed_field
+field_map: {  }

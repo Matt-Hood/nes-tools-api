@@ -1,0 +1,30 @@
+uuid: c6f689fe-5492-475d-b05a-929cf32b2c6f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - stable
+_core:
+  default_config_hash: 0exrpittMZ_RSiVhEIFOW84bflEllDTs9PCOdP6u4v0
+id: stable_page_title
+theme: stable
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: |
+      <front>
+      /layout/*
+      /landing/*

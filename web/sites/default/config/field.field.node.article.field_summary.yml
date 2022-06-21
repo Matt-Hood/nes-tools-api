@@ -1,0 +1,21 @@
+uuid: 0d3bee88-52a3-4c5a-af02-03797852c65e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.article
+_core:
+  default_config_hash: vKV5LDezuKCiyggvkjfyCZN7zK9HgwtVy2rltibezWo
+id: node.article.field_summary
+field_name: field_summary
+entity_type: node
+bundle: article
+label: Summary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

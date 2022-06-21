@@ -1,0 +1,36 @@
+uuid: f9e9c067-ed80-4580-a70d-b4eb335fe8da
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing
+  module:
+    - node
+_core:
+  default_config_hash: DIMmHSHAs3ZBapPK0h92XygU9A-yu3SoeTKOJvR5hEo
+id: node.landing
+targetEntityType: node
+bundle: landing
+types:
+  - 'schema:WebPage'
+fieldMappings:
+  title:
+    properties:
+      - 'schema:name'
+  created:
+    properties:
+      - 'schema:dateCreated'
+    datatype_callback:
+      callable: 'Drupal\rdf\CommonDataConverter::dateIso8601Value'
+  changed:
+    properties:
+      - 'schema:dateModified'
+    datatype_callback:
+      callable: 'Drupal\rdf\CommonDataConverter::dateIso8601Value'
+  body:
+    properties:
+      - 'schema:text'
+  uid:
+    properties:
+      - 'schema:author'
+    mapping_type: rel

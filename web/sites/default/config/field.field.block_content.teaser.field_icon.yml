@@ -1,0 +1,23 @@
+uuid: c3e2b4c0-f190-45c6-ae44-7d23f4c979b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.teaser
+    - field.storage.block_content.field_icon
+  module:
+    - fontawesome
+_core:
+  default_config_hash: rPjFPF_hwWMipJUCT9aLmnpPDawsW3wFoe23bJdm53Q
+id: block_content.teaser.field_icon
+field_name: field_icon
+entity_type: block_content
+bundle: teaser
+label: Icon
+description: 'Render a Font Awesome icon.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: fontawesome_icon

@@ -1,0 +1,13 @@
+uuid: 0a7ed627-c214-44db-986e-c66621dfb394
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.library
+_core:
+  default_config_hash: n1SpQ6hSVtNcIudPdnElino5qbRu1HFTMg1q8qmferM
+id: block_content.library
+target_entity_type_id: block_content
+target_bundle: library
+default_langcode: site_default
+language_alterable: false

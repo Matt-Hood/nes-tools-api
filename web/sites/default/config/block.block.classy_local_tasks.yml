@@ -1,0 +1,29 @@
+uuid: ed19bdb1-0a50-4723-997a-f771b8454f8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - classy
+_core:
+  default_config_hash: sj31SXvt31zYeqecgBwYeTigOWp6PjYY5EBtCnysSEs
+id: classy_local_tasks
+theme: classy
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '/user*'

@@ -1,0 +1,30 @@
+uuid: fb410dfa-7ecf-49c9-94e6-c90383701c65
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nimbus_theme
+_core:
+  default_config_hash: 0exrpittMZ_RSiVhEIFOW84bflEllDTs9PCOdP6u4v0
+id: nimbus_theme_page_title
+theme: nimbus_theme
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    pages: |
+      <front>
+      /layout/*
+      /landing/*
+    negate: true
+    context_mapping: {  }

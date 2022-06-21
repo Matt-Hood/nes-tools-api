@@ -1,0 +1,27 @@
+uuid: f9cab8c0-44b2-482b-934e-459c464f6040
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - classy
+_core:
+  default_config_hash: '-jffTccqq3pDrH_eV_W3f1KNZfSk1oKaKlTWKPmHkhk'
+id: classy_useraccountmenu
+theme: classy
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

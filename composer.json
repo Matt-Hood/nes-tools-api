@@ -24,6 +24,7 @@
         "cweagans/composer-patches": "^1.7.0",
         "drupal/core-composer-scaffold": "^9.0",
         "drupal/core-recommended": "^9.0@stable",
+        "drupal/gin": "^3.0@beta",
         "drupal/guardr_core": "^2.0",
         "drush/drush": "^11.0",
         "mediacurrent/mis_profile": "^2.0",

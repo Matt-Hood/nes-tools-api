@@ -1,0 +1,38 @@
+uuid: 785de8f8-0297-4709-8e29-7c1fdb7feb04
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - node_revision_delete
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+    publish_past_date_created: false
+  node_revision_delete:
+    minimum_revisions_to_keep: 3
+    minimum_age_to_delete: 0
+    when_to_delete: 0
+_core:
+  default_config_hash: n4v6nlyc_9YNBfy0wO9mvb13xcka9_3TFURXgM_IH-A
+name: Blog
+type: blog
+description: 'News and articles.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

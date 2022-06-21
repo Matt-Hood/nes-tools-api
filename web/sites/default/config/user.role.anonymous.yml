@@ -1,0 +1,21 @@
+uuid: 9d4e6978-1575-4afd-9499-74149425fca3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - search_api_page
+    - system
+_core:
+  default_config_hash: mQxaSOS-Kxu1J4zTQxGmhYXvY1Z9t-ewPQDo5m06b20
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'view media'
+  - 'view search api pages'
+  - 'view terms in authors'
+  - 'view terms in resource'
+  - 'view terms in tags'

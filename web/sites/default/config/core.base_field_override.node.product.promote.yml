@@ -1,0 +1,24 @@
+uuid: ae039d36-21d1-42e3-a2bc-5f39efb3b596
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.product
+_core:
+  default_config_hash: AaLZ3NPvM_3GwnSDM9MtcwU1foIdqxiGJlOFfrAtXl4
+id: node.product.promote
+field_name: promote
+entity_type: node
+bundle: product
+label: 'Promoted to front product'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
