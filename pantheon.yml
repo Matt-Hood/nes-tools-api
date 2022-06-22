@@ -2,6 +2,7 @@ api_version: 1
 web_docroot: true
 php_version: 7.4
 enforce_https: transitional
+protected_web_paths_override: true
 drush_version: 10
 database:
   version: 10.4
