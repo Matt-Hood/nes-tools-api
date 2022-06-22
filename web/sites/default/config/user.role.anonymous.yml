@@ -2,8 +2,11 @@ uuid: 9d4e6978-1575-4afd-9499-74149425fca3
 langcode: en
 status: true
 dependencies:
+  config:
+    - rest.resource.user_registration
   module:
     - media
+    - rest
     - search_api_page
     - system
 _core:
@@ -14,6 +17,7 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
+  - 'restful post user_registration'
   - 'view media'
   - 'view search api pages'
   - 'view terms in authors'

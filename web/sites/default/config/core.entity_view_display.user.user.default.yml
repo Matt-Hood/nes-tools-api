@@ -1,0 +1,30 @@
+uuid: 5f68375a-ffa0-450a-b67c-80e925789ecd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_key_bindings
+  module:
+    - key_value_field
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_key_bindings:
+    type: key_value
+    label: above
+    settings:
+      value_only: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

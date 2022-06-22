@@ -2,10 +2,13 @@ uuid: b327cdbc-d9d5-4602-be72-9f6cef054c8e
 langcode: en
 status: true
 dependencies:
+  config:
+    - rest.resource.user_registration
   module:
     - fontawesome
     - google_analytics
     - media
+    - rest
     - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
@@ -17,4 +20,5 @@ permissions:
   - 'access content'
   - 'access fontawesome additional settings'
   - 'opt-in or out of google analytics tracking'
+  - 'restful post user_registration'
   - 'view media'

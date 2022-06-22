@@ -1,0 +1,23 @@
+uuid: e8383832-6952-4464-b93a-808f5a7ba5d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - serialization
+    - system
+    - user
+id: entity.action
+plugin_id: 'entity:action'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+    - json
+    - xml
+  authentication:
+    - basic_auth
+    - cookie

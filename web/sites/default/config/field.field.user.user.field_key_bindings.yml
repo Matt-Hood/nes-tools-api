@@ -1,0 +1,21 @@
+uuid: 65596791-c9ed-4978-a46c-9871ab13cd9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_key_bindings
+  module:
+    - key_value_field
+    - user
+id: user.user.field_key_bindings
+field_name: field_key_bindings
+entity_type: user
+bundle: user
+label: 'Key Bindings'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: key_value

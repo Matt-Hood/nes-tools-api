@@ -1,0 +1,59 @@
+uuid: 2fc6670d-977e-446f-9b13-0facf61d2c62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_key_bindings
+  module:
+    - key_value_field
+    - path
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: -10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_key_bindings:
+    type: key_value_textfield
+    weight: 31
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+      key_size: 60
+      key_placeholder: ''
+      description_enabled: true
+      description_placeholder: ''
+      key_label: Key
+      value_label: Value
+      description_label: Description
+      description_rows: 5
+    third_party_settings: {  }
+  google_analytics:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  language:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
