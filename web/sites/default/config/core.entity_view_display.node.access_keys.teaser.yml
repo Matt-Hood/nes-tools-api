@@ -1,0 +1,26 @@
+uuid: ac770959-57fe-499d-9c81-337316c83397
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.access_keys.field_access_key_
+    - field.field.node.access_keys.field_state
+    - node.type.access_keys
+  module:
+    - user
+id: node.access_keys.teaser
+targetEntityType: node
+bundle: access_keys
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_access_key_: true
+  field_state: true
+  langcode: true
+  search_api_excerpt: true

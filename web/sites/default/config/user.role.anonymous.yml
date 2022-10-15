@@ -17,9 +17,11 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
+  - 'access user profiles'
   - 'restful post user_registration'
   - 'view media'
   - 'view search api pages'
   - 'view terms in authors'
   - 'view terms in resource'
   - 'view terms in tags'
+  - 'view user email addresses'

@@ -1,0 +1,7 @@
+name: Search API JSON
+type: module
+description: 'Query Search API indexes and retrieve results as a JSON response.'
+core_version_requirement: ^8.8 || ^9
+package: Search
+dependencies:
+  - search_api:search_api

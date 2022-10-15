@@ -22,6 +22,7 @@
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.7.0",
+        "drupal/core": "^9.4",
         "drupal/core-composer-scaffold": "^9.0",
         "drupal/core-recommended": "^9.0@stable",
         "drupal/gin": "^3.0@beta",
@@ -52,7 +53,8 @@
         "vlucas/phpdotenv": "^2.4"
     },
     "conflict": {
-        "drupal/drupal": "*"
+        "drupal/drupal": "*",
+            "drupal/ctools": "^3.10 || ^4.0.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -77,7 +79,9 @@
         ]
     },
     "autoload-dev": {
-        "files": ["load.environment.php"]
+        "files": [
+            "load.environment.php"
+        ]
     },
     "scripts": {
         "robo": "$(pwd)/bin/robo --ansi --load-from $(pwd)/scripts",
@@ -103,14 +107,38 @@
             }
         },
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library", "type:bower-asset", "type:npm-asset"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
-            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
-            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
+        "patches": {
+            "drupal/core": {
+                "3294680- PHP8.1 deprecation: str_replace(): Passing null to parameter #3": "https://www.drupal.org/files/issues/2022-07-07/3294680-2.patch"
+
+            }
         }
     }
 }

@@ -16,8 +16,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: true
     enabled: true
+    allow_custom: true
     sections:
       -
         layout_id: layout_onecol
@@ -30,8 +30,8 @@ third_party_settings:
             configuration:
               id: 'block_content:20adb562-cefc-40b2-80bc-75797db2dec0'
               label: 'Hero: Rain'
-              provider: block_content
               label_display: ''
+              provider: block_content
               status: true
               info: ''
               view_mode: full
@@ -56,7 +56,12 @@ third_party_settings:
       - Webform
       - core
     entity_view_mode_restriction:
-      whitelisted_blocks:
+      allowed_layouts:
+        - layout_onecol
+        - layout_twocol_section
+        - layout_threecol_section
+      denylisted_blocks: {  }
+      allowlisted_blocks:
         'Chaos Tools': {  }
         'Content fields': {  }
         Forms: {  }
@@ -68,11 +73,6 @@ third_party_settings:
         User: {  }
         Webform: {  }
         core: {  }
-      blacklisted_blocks: {  }
-      allowed_layouts:
-        - layout_onecol
-        - layout_twocol_section
-        - layout_threecol_section
 _core:
   default_config_hash: JQEBlOlpf4QTrye6grX8NKQ_YTeTGUH8Z4frVkKlsV8
 id: node.layout.default
