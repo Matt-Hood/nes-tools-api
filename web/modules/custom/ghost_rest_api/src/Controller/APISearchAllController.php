@@ -13,7 +13,6 @@ use Drupal\search_api_json\Search\SearchService;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\search_api\IndexInterface;
-use Drupal\Core\Entity\EntityInterface;
 
 /**
  * Returns responses for API Search Page routes.
@@ -348,7 +347,7 @@ class APISearchAllController extends ControllerBase implements ContainerInjectio
       // Retrieve the appropriate image.
       if (!$media->get('field_image')->isEmpty()) {
         $files = $media->get('field_image')->referencedEntities();
-    }
+      }
       else {
         $files = $media->get('thumbnail')->referencedEntities();
       }

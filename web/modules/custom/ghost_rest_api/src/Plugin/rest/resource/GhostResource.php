@@ -4,11 +4,9 @@ namespace Drupal\ghost_rest_api\Plugin\rest\resource;
 
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
-use Drupal\Component\Utility\Xss;
-use Drupal\node\NodeInterface;
 
 /**
- * Provides a Ghost Access Key Resource
+ * Provides a Ghost Access Key Resource.
  *
  * @RestResource(
  *   id = "access_key_resource",
@@ -18,14 +16,15 @@ use Drupal\node\NodeInterface;
  *   }
  * )
  */
-
 class GhostResource extends ResourceBase {
+
   /**
    * Responds to entity GET requests.
+   *
    * @return \Drupal\rest\ResourceResponse
+   *   The resource response.
    */
-  public function get($access_key=''): ResourceResponse
-  {
+  public function get($access_key = ''): ResourceResponse {
     // @todo Look into seeing if I can load/match the access key here with a public method from Drupal
     $all_access_keys = \Drupal::entityTypeManager()
       ->getStorage('node')
@@ -39,7 +38,8 @@ class GhostResource extends ResourceBase {
       /*
       Get the details of each access key node and
       puts it in an array.
-      We have to do this because we need to manipulate the array so that it will spit out exactly the XML we want
+      We have to do this because we need to manipulate
+      the array so that it will spit out exactly the XML we want
        */
 
       // @todo improve speed of search
@@ -49,13 +49,13 @@ class GhostResource extends ResourceBase {
           $access_key_data = [
             "key" => $valid_key[0]['key'],
             "value" => $valid_key[0]['value'],
-            ];
+          ];
 
-          // Unpublish the node
+          // Unpublish the node.
           $key->set('field_state', '[REDEEMED]');
           $key->setUnpublished();
           $key->save();
-          // After access key is found exit the loop and return
+          // After access key is found exit the loop and return.
           break;
         }
 
@@ -65,7 +65,7 @@ class GhostResource extends ResourceBase {
     if (!empty($access_key_data)) {
       $response = [
         'message' => 'Successfully redeemed accesss key' . ' ' . $access_key_data["value"],
-        'subscription' =>  $access_key_data["key"]
+        'subscription' => $access_key_data["key"],
       ];
     }
     else {
@@ -73,4 +73,5 @@ class GhostResource extends ResourceBase {
     }
     return new ResourceResponse($response);
   }
+
 }
