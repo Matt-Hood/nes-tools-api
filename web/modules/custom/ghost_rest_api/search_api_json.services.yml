@@ -1,0 +1,6 @@
+services:
+  search_api_json.search_service:
+      class: Drupal\search_api_json\Search\SearchService
+      arguments:
+        - '@language_manager'
+        - '@entity_type.manager'

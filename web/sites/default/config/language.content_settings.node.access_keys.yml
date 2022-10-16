@@ -1,0 +1,11 @@
+uuid: 64e8e249-d907-421b-a92a-a4c75576330c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.access_keys
+id: node.access_keys
+target_entity_type_id: node
+target_bundle: access_keys
+default_langcode: site_default
+language_alterable: false

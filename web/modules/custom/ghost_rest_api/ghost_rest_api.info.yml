@@ -1,0 +1,5 @@
+name: Ghost REST API
+description: Defines a custom REST Resource
+core_version_requirement: ^8.8 || ^9
+package: Ghost API
+type: module

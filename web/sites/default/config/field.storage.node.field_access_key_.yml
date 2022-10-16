@@ -1,0 +1,24 @@
+uuid: e82b4a41-b5b0-4a40-8fca-f74545f5184a
+langcode: en
+status: true
+dependencies:
+  module:
+    - key_value_field
+    - node
+id: node.field_access_key_
+field_name: field_access_key_
+entity_type: node
+type: key_value
+settings:
+  key_max_length: 255
+  key_is_ascii: false
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: key_value_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

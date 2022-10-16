@@ -1,0 +1,7 @@
+search_api_json.search_all_api:
+  path: '/api/v1/search-results/{search_keys}'
+  defaults:
+    _controller: '\Drupal\search_api_json\Controller\APISearchAllController::searchResponse'
+    search_keys: ''
+  requirements:
+    _permission: 'access content'
