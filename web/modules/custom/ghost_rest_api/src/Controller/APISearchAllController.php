@@ -348,7 +348,7 @@ class APISearchAllController extends ControllerBase implements ContainerInjectio
       // Retrieve the appropriate image.
       if (!$media->get('field_image')->isEmpty()) {
         $files = $media->get('field_image')->referencedEntities();
-      }
+    }
       else {
         $files = $media->get('thumbnail')->referencedEntities();
       }
