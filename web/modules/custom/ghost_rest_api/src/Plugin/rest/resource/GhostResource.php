@@ -45,12 +45,14 @@ class GhostResource extends ResourceBase {
       // @todo improve speed of search
       foreach ($all_access_keys as $key) {
         $valid_key = $key->get('field_access_key_')->getValue();
+        $creation_date = $key->getCreatedTime();
         if ($valid_key[0]['value'] == $access_key) {
           $access_key_data = [
             "key" => $valid_key[0]['key'],
             "value" => $valid_key[0]['value'],
           ];
-
+          $redeem_date = date("y-m-d h:i:s");
+          ;
           // Unpublish the node.
           $key->set('field_state', '[REDEEMED]');
           $key->setUnpublished();
@@ -66,6 +68,7 @@ class GhostResource extends ResourceBase {
       $response = [
         'message' => 'Successfully redeemed accesss key' . ' ' . $access_key_data["value"],
         'subscription' => $access_key_data["key"],
+        'redeemed' => $redeem_date ?? '',
       ];
     }
     else {
