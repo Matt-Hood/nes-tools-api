@@ -1,22 +1,22 @@
 <?php
 
-namespace Drupal\ghost_rest_api\Plugin\rest\resource;
+namespace Drupal\hf_toolkit_rest_api_subs\Plugin\rest\resource;
 
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 
 /**
- * Provides a Ghost Access Key Resource.
+ * Provides a HF Toolkit Key Resource.
  *
  * @RestResource(
- *   id = "access_key_resource",
- *   label = @Translation("Ghost Access Key Resource"),
+ *   id = "subscription_resource",
+ *   label = @Translation("HF Toolkit Access Key Resource"),
  *   uri_paths = {
- *     "canonical" = "/ghost_rest_api/access_key_resource/{access_key}"
+ *     "canonical" = "/hf_toolkit_rest_api/toolkit_sub_resource/{$access_key}"
  *   }
  * )
  */
-class GhostResource extends ResourceBase {
+class SubscriptionResource extends ResourceBase {
 
   /**
    * Responds to entity GET requests.
@@ -48,7 +48,7 @@ class GhostResource extends ResourceBase {
         if (!is_null($key->get('field_subscription_type')->referencedEntities()[0])) {
           $valid_spin_key = $key->get('field_subscription_type')->referencedEntities()[0]->getName() ?? '';
         }
-        if ($valid_spin_key == 'Ghost Subscription Time') {
+        if ($valid_spin_key == 'HF Toolkit Subscription Time') {
           $valid_key = $key->get('field_access_key_')->getValue();
           $creation_date = $key->getCreatedTime();
           if ($valid_key[0]['value'] == $access_key) {

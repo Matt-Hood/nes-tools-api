@@ -1,0 +1,9 @@
+id: sub_resource
+plugin_id: subscription_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth
