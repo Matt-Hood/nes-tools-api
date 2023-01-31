@@ -1,0 +1,33 @@
+uuid: d2795a63-5788-405b-8fab-4160e3a01cd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subscription_type
+    - node.type.access_keys
+    - taxonomy.vocabulary.key_type
+  content:
+    - 'taxonomy_term:key_type:58b40cb0-dc09-428b-b9d3-ca48e4ccb159'
+id: node.access_keys.field_subscription_type
+field_name: field_subscription_type
+entity_type: node
+bundle: access_keys
+label: 'Subscription Type'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 58b40cb0-dc09-428b-b9d3-ca48e4ccb159
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      key_type: key_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

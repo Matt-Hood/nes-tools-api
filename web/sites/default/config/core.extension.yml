@@ -25,6 +25,7 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_clone: 0
   entity_reference_revisions: 0
   field: 0
   field_group: 0
@@ -40,6 +41,9 @@ module:
   google_analytics: 0
   hal: 0
   help: 0
+  hf_toolkit_rest_api: 0
+  hf_toolkit_rest_api_prizes: 0
+  hf_toolkit_rest_api_sub: 0
   history: 0
   image: 0
   inline_block_title_automatic: 0

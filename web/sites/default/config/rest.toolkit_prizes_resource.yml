@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: TcRKxUJpFrGejr26qiZPPAsgr6wuBDqXLFKRcr9x6eY
+id: prizes_resource
+plugin_id: toolkit_prizes_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth

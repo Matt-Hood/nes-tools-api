@@ -1,0 +1,19 @@
+uuid: 8a08d7d1-4a0e-4559-a5bb-f44d243c829f
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hf_toolkit_rest_api
+    - serialization
+_core:
+  default_config_hash: GWUP5kOFgGuZ3LnQettfuEf_XfdNRXCNNIuNl8Zr6-o
+id: toolkit_resource
+plugin_id: toolkit_sub_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth

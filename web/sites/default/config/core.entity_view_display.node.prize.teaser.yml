@@ -1,0 +1,24 @@
+uuid: 81b849ad-9a5b-47c5-a608-7e7fab80b60b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.prize.field_spin_prize
+    - node.type.prize
+  module:
+    - user
+id: node.prize.teaser
+targetEntityType: node
+bundle: prize
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_spin_prize: true
+  langcode: true
+  search_api_excerpt: true

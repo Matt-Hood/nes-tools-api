@@ -1,0 +1,8 @@
+uuid: 3759fdb2-d691-4548-a218-e2cc931512bb
+langcode: en
+status: true
+dependencies: {  }
+name: 'Key Type'
+vid: key_type
+description: ''
+weight: 0

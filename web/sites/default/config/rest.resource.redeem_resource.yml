@@ -1,0 +1,19 @@
+uuid: 5b82a619-d68c-4996-a7ce-c5e20d792556
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hf_toolkit_rest_api
+    - serialization
+_core:
+  default_config_hash: sAH8m3uy6u8nfULD7YQICSjtTLUO_B2i-gPolHS1vlc
+id: redeem_resource
+plugin_id: redeem_spin_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth

@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: zImahL0U-kB240zgbxmPXce24ib6o4x-ruYJX18DPEw
+id: sub_resource
+plugin_id: toolkit_sub_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_key_bindings
+    - field.field.user.user.field_spin_balance
   module:
     - key_value_field
     - path
@@ -25,14 +26,21 @@ content:
     settings:
       size: 60
       placeholder: ''
-      key_size: 60
-      key_placeholder: ''
-      description_enabled: true
-      description_placeholder: ''
       key_label: Key
       value_label: Value
       description_label: Description
       description_rows: 5
+      key_size: 60
+      key_placeholder: ''
+      description_enabled: true
+      description_placeholder: ''
+    third_party_settings: {  }
+  field_spin_balance:
+    type: number
+    weight: 32
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   google_analytics:
     weight: 3

@@ -1,0 +1,19 @@
+uuid: c390f881-d762-4a15-be76-9a03f7f61444
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hf_toolkit_rest_api_prizes
+    - serialization
+_core:
+  default_config_hash: 7NqgbTYawPq8AP5tjWRHvsrwHBAH2_Sa4UhVpwUOV18
+id: prize_resource
+plugin_id: hft_prize_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth

@@ -1,0 +1,20 @@
+uuid: 3e411388-25d9-4b50-bc9c-00d06012de79
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_spin_balance
+field_name: field_spin_balance
+entity_type: user
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

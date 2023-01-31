@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.access_keys.field_access_key_
     - field.field.node.access_keys.field_state
+    - field.field.node.access_keys.field_subscription_type
     - node.type.access_keys
   module:
     - user
@@ -22,5 +23,6 @@ content:
 hidden:
   field_access_key_: true
   field_state: true
+  field_subscription_type: true
   langcode: true
   search_api_excerpt: true

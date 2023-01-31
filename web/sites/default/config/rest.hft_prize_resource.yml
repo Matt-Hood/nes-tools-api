@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: 7NqgbTYawPq8AP5tjWRHvsrwHBAH2_Sa4UhVpwUOV18
+id: prize_resource
+plugin_id: hft_prize_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth

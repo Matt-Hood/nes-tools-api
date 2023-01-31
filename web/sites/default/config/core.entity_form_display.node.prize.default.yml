@@ -1,19 +1,17 @@
-uuid: 34fb3ae4-9a2d-4e62-9e15-384d6fb3d786
+uuid: b1bdb044-7610-4952-9c0e-260307db7652
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.access_keys.field_access_key_
-    - field.field.node.access_keys.field_state
-    - field.field.node.access_keys.field_subscription_type
-    - node.type.access_keys
+    - field.field.node.prize.field_spin_prize
+    - node.type.prize
   module:
     - key_value_field
     - path
     - scheduler
-id: node.access_keys.default
+id: node.prize.default
 targetEntityType: node
-bundle: access_keys
+bundle: prize
 mode: default
 content:
   created:
@@ -22,44 +20,26 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_access_key_:
-    type: key_value_textfield
-    weight: 121
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-      key_label: Key
-      value_label: Value
-      description_label: Description
-      description_rows: 5
-      key_size: 60
-      key_placeholder: ''
-      description_enabled: true
-      description_placeholder: ''
-    third_party_settings: {  }
   field_group_jumpnav:
     weight: 50
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_state:
-    type: string_textfield
-    weight: 122
+  field_spin_prize:
+    type: key_value_textarea
+    weight: 121
     region: content
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
-    third_party_settings: {  }
-  field_subscription_type:
-    type: entity_reference_autocomplete
-    weight: 123
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      key_size: 60
+      key_label: Key
+      key_placeholder: ''
+      value_label: Value
+      description_enabled: true
+      description_label: Description
+      description_rows: 5
+      description_placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select

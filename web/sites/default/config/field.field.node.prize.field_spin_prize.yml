@@ -1,0 +1,22 @@
+uuid: 3af14ecf-146d-469c-a290-69562d6d8c8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_spin_prize
+    - node.type.prize
+  module:
+    - key_value_field
+id: node.prize.field_spin_prize
+field_name: field_spin_prize
+entity_type: node
+bundle: prize
+label: 'Spin Prize'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  default_format: basic_html
+field_type: key_value_long

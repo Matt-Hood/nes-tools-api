@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.access_keys.field_access_key_
     - field.field.node.access_keys.field_state
+    - field.field.node.access_keys.field_subscription_type
     - node.type.access_keys
   module:
     - key_value_field
@@ -29,6 +30,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_subscription_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
     region: content
   links:
     settings: {  }
