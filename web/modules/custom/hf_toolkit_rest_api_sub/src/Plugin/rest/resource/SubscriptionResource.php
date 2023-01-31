@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\hf_toolkit_rest_api_subs\Plugin\rest\resource;
+namespace Drupal\hf_toolkit_rest_api_sub\Plugin\rest\resource;
 
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
@@ -9,10 +9,10 @@ use Drupal\rest\ResourceResponse;
  * Provides a HF Toolkit Key Resource.
  *
  * @RestResource(
- *   id = "subscription_resource",
+ *   id = "toolkit_sub_resource",
  *   label = @Translation("HF Toolkit Access Key Resource"),
  *   uri_paths = {
- *     "canonical" = "/hf_toolkit_rest_api/toolkit_sub_resource/{$access_key}"
+ *     "canonical" = "/hf_toolkit_rest_api/toolkit_sub_resource/{access_key}"
  *   }
  * )
  */
@@ -56,7 +56,7 @@ class SubscriptionResource extends ResourceBase {
               "key" => $valid_key[0]['key'],
               "value" => $valid_key[0]['value'],
             ];
-            $redeem_date = date("y-m-d h:i:s");
+            $redeem_date = date("Y-m-d\TH:i");
             ;
             // Unpublish the node.
             $key->set('field_state', '[REDEEMED]');

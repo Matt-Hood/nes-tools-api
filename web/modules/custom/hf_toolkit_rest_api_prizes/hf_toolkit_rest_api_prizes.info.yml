@@ -1,0 +1,5 @@
+name: HF Toolkit REST API Prizes
+description: Defines a custom REST Resource
+core_version_requirement: ^8.8 || ^9
+package: HF Toolkit API
+type: module

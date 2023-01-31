@@ -56,7 +56,7 @@ class GhostResource extends ResourceBase {
               "key" => $valid_key[0]['key'],
               "value" => $valid_key[0]['value'],
             ];
-            $redeem_date = date("y-m-d h:i:s");
+            $redeem_date = date("Y-m-d\TH:i");
             ;
             // Unpublish the node.
             $key->set('field_state', '[REDEEMED]');

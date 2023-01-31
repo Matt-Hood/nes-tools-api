@@ -1,5 +1,5 @@
-id: sub_resource
-plugin_id: toolkit_sub_resource
+id: prize_resource
+plugin_id: hft_prize_resource
 granularity: method
 configuration:
   GET:
