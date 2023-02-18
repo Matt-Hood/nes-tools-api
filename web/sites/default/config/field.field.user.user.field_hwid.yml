@@ -1,0 +1,20 @@
+uuid: 6da02525-2c74-4976-82a2-299382f5e0bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_hwid
+  module:
+    - user
+id: user.user.field_hwid
+field_name: field_hwid
+entity_type: user
+bundle: user
+label: hwid
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

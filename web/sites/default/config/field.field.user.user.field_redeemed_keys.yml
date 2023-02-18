@@ -1,0 +1,21 @@
+uuid: e048cb69-73d1-4f2d-a17f-fb49f80eb914
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_redeemed_keys
+  module:
+    - key_value_field
+    - user
+id: user.user.field_redeemed_keys
+field_name: field_redeemed_keys
+entity_type: user
+bundle: user
+label: 'Redeemed Keys'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: key_value

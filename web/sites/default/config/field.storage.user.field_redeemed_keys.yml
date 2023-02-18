@@ -1,0 +1,24 @@
+uuid: 9afa9eff-8dd9-4dac-b746-833d1f709c5c
+langcode: en
+status: true
+dependencies:
+  module:
+    - key_value_field
+    - user
+id: user.field_redeemed_keys
+field_name: field_redeemed_keys
+entity_type: user
+type: key_value
+settings:
+  key_max_length: 255
+  key_is_ascii: false
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: key_value_field
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

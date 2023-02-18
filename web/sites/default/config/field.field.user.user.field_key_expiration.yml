@@ -1,0 +1,21 @@
+uuid: 35f5d71b-785d-46ba-ab96-560c22eb32fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_key_expiration
+  module:
+    - datetime
+    - user
+id: user.user.field_key_expiration
+field_name: field_key_expiration
+entity_type: user
+bundle: user
+label: 'Key Expiration'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
