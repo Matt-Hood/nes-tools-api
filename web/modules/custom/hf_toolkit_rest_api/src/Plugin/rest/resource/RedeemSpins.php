@@ -64,6 +64,7 @@ class RedeemSpins extends ResourceBase {
             $spin_balance = $account->get('field_spin_balance')->getValue();
             if (empty($spin_balance)) {
               $spin_balance = 0;
+
             }
             $spin_balance_value = intval($spin_balance[0]['value']);
             $spins_bought = $valid_key[0]['key'];
