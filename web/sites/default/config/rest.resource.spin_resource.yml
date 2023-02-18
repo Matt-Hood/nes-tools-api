@@ -1,0 +1,19 @@
+uuid: 09d80a13-ef10-4a0b-9d8d-e961e8819fd8
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hf_toolkit_rest_api_get_spins
+    - serialization
+_core:
+  default_config_hash: XsAHhS6ixiNzww30LipaB81YhH6J2zqZUbI8h3g1tsE
+id: spin_resource
+plugin_id: spins_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth

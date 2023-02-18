@@ -42,6 +42,7 @@ module:
   hal: 0
   help: 0
   hf_toolkit_rest_api: 0
+  hf_toolkit_rest_api_get_spins: 0
   hf_toolkit_rest_api_prizes: 0
   hf_toolkit_rest_api_sub: 0
   history: 0
