@@ -3,9 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_hwid
     - field.field.user.user.field_key_bindings
+    - field.field.user.user.field_key_expiration
+    - field.field.user.user.field_redeemed_keys
     - field.field.user.user.field_spin_balance
   module:
+    - datetime
     - key_value_field
     - path
     - user
@@ -19,9 +23,39 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_hwid:
+    type: string_textfield
+    weight: 34
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_key_bindings:
     type: key_value_textfield
     weight: 31
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+      key_label: Key
+      value_label: Value
+      description_label: Description
+      description_rows: 5
+      key_size: 60
+      key_placeholder: ''
+      description_enabled: true
+      description_placeholder: ''
+    third_party_settings: {  }
+  field_key_expiration:
+    type: datetime_default
+    weight: 33
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_redeemed_keys:
+    type: key_value_textfield
+    weight: 35
     region: content
     settings:
       size: 60
