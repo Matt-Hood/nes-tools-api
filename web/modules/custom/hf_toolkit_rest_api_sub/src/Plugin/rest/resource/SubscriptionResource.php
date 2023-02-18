@@ -52,16 +52,16 @@ class SubscriptionResource extends ResourceBase {
       foreach ($all_access_keys as $key) {
         $account = User::load($uid);
         $valid_access_key = '';
-        $user_hwid = '';
+        $user_hwid = $hwid;
+        $hwid_set = FALSE;
         if (!is_null($key->get('field_subscription_type')->referencedEntities()[0])) {
           $valid_access_key = $key->get('field_subscription_type')->referencedEntities()[0]->getName() ?? '';
         }
-        if (!empty($account->get('field_hwid')->getValue())) {
-          $user_hwid = $account->get('field_hwid')->getValue();
+        if (!is_null($account->get('field_hwid')->value)) {
+          $user_hwid = $account->get('field_hwid')->value;
+          $hwid_set = TRUE;
         }
-        else {
-          $user_hwid = $hwid;
-        }
+
         if ($valid_access_key == 'HF Toolkit Subscription Time') {
           $valid_key = $key->get('field_access_key_')->getValue();
           $creation_date = $key->getCreatedTime();
@@ -86,15 +86,30 @@ class SubscriptionResource extends ResourceBase {
             }
 
             $redeem_date = date_create(date("y-m-d h:i:s"));
-            date_add($redeem_date, date_interval_create_from_date_string("30 days"));
+            date_add($redeem_date, date_interval_create_from_date_string("${expiration_date_number} days"));
 
             $redeem_date = date_format($redeem_date, "Y-m-d\TH:i:s");
 
             $account->set('field_key_expiration', $redeem_date);
             $account->save();
+
             if ($user_hwid == $hwid) {
+              if (!$hwid_set) {
+                $account->set('field_hwid', $hwid);
+                $account->save();
+              }
+
               $redeemed_keys = $account->get('field_redeemed_keys')->getValue();
-              $expiration_date = $account->get('field_key_expiration');
+              $current_date = date("y-m-d h:i:s");
+              $redeemed_keys[] = [
+                'key' => $valid_key[0]['key'],
+                'value' => $valid_key[0]['value'],
+                'description' => 'redeemed on: ' . $current_date,
+              ];
+              $account->set('field_redeemed_keys', $redeemed_keys);
+              $account->save();
+
+              $expiration_date = $account->get('field_key_expiration')->getValue();
               $access_key_data = [
                 "key" => $valid_key[0]['key'],
                 "value" => $valid_key[0]['value'],
