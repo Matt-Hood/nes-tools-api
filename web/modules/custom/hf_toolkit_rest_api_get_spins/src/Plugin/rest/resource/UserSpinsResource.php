@@ -32,16 +32,20 @@ class UserSpinsResource extends ResourceBase {
       $account = User::load($uid);
       $spin_balance = $account->get('field_spin_balance')->getValue();
       $user_spin_balance = $spin_balance;
-
+      $expiration_date = $account->get('field_key_expiration')->getValue();
     }
 
     if (!empty($user_spin_balance)) {
       $response = [
         'Spin Balance' => $user_spin_balance,
+        'Expiration' => $expiration_date ?? 'no key redeemed',
       ];
     }
     else {
-      $response = ['Spin Balance' => '0'];
+      $response = [
+        'Spin Balance' => '0',
+        'Expiration' => 'not set',
+      ];
     }
     return new ResourceResponse($response);
   }
