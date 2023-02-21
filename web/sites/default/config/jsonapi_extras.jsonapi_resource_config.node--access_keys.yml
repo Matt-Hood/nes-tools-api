@@ -10,7 +10,7 @@ third_party_settings:
   jsonapi_defaults:
     page_limit: 50
 id: node--access_keys
-disabled: false
+disabled: true
 path: access_keys
 resourceType: access_keys
 resourceFields:
@@ -156,5 +156,17 @@ resourceFields:
     disabled: false
     fieldName: field_access_key_
     publicName: field_access_key_
+    enhancer:
+      id: ''
+  field_state:
+    disabled: false
+    fieldName: field_state
+    publicName: field_state
+    enhancer:
+      id: ''
+  field_subscription_type:
+    disabled: false
+    fieldName: field_subscription_type
+    publicName: field_subscription_type
     enhancer:
       id: ''

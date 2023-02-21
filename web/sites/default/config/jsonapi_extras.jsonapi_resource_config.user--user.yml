@@ -9,7 +9,7 @@ third_party_settings:
   jsonapi_defaults:
     page_limit: 50
 id: user--user
-disabled: false
+disabled: true
 path: user/user
 resourceType: user--user
 resourceFields:
@@ -127,9 +127,33 @@ resourceFields:
     publicName: path
     enhancer:
       id: ''
+  field_hwid:
+    disabled: false
+    fieldName: field_hwid
+    publicName: field_hwid
+    enhancer:
+      id: ''
   field_key_bindings:
     disabled: false
     fieldName: field_key_bindings
     publicName: field_key_bindings
+    enhancer:
+      id: ''
+  field_key_expiration:
+    disabled: false
+    fieldName: field_key_expiration
+    publicName: field_key_expiration
+    enhancer:
+      id: ''
+  field_redeemed_keys:
+    disabled: false
+    fieldName: field_redeemed_keys
+    publicName: field_redeemed_keys
+    enhancer:
+      id: ''
+  field_spin_balance:
+    disabled: false
+    fieldName: field_spin_balance
+    publicName: field_spin_balance
     enhancer:
       id: ''
