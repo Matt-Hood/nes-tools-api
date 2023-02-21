@@ -124,15 +124,23 @@ class PrizesResource extends ResourceBase {
       if (!is_null($diluated_prizes[$prize_won]['name'])) {
         $diluated_prizes[$prize_won]["entity"]->setUnpublished();
         $diluated_prizes[$prize_won]["entity"]->save();
+        $account = User::load($uid);
+        $account->set('field_spin_balance', intval($account->get('field_spin_balance')->getValue()[0]['value'] - 1));
+        $account->save();
         $response = [
           'message' => 'Congratulations you have won' . ' ' . $diluated_prizes[$prize_won]["name"] . " " . 'of' . " " . $diluated_prizes[$prize_won]["value"],
           'prize' => $diluated_prizes[$prize_won]["prize"],
           'redeemed' => $redeem_date ?? '',
+          'spin balance' => intval($account->get('field_spin_balance')->getValue()[0]['value']),
         ];
       }
       else {
+        $account = User::load($uid);
+        $account->set('field_spin_balance', intval($account->get('field_spin_balance')->getValue()[0]['value']) - 1);
+        $account->save();
         $response = [
           'message' => 'No prize won, if you are feeling lucky spin again!',
+          'spin balance' => intval($account->get('field_spin_balance')->getValue()[0]['value']),
         ];
       }
     }
