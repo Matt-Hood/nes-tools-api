@@ -4,6 +4,7 @@ namespace Drupal\ghost_rest_api\Plugin\rest\resource;
 
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
+use Drupal\user\Entity\User;
 
 /**
  * Provides a Ghost Access Key Resource.
