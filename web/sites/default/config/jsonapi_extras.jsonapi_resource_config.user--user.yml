@@ -9,7 +9,7 @@ third_party_settings:
   jsonapi_defaults:
     page_limit: 50
 id: user--user
-disabled: true
+disabled: false
 path: user/user
 resourceType: user--user
 resourceFields:

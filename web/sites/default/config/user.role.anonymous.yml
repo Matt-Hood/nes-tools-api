@@ -3,6 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - rest.resource.demo_resource
+    - rest.resource.prize_resource
+    - rest.resource.redeem_resource
+    - rest.resource.spin_resource
+    - rest.resource.toolkit_resource
     - rest.resource.user_registration
   module:
     - media
@@ -18,6 +23,11 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access user profiles'
+  - 'restful get access_key_resource'
+  - 'restful get hft_prize_resource'
+  - 'restful get redeem_spin_resource'
+  - 'restful get spins_resource'
+  - 'restful get toolkit_sub_resource'
   - 'restful post user_registration'
   - 'view media'
   - 'view search api pages'

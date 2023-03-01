@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: H1Qh4KyUWu3Php3QqGKw49OreFMgYaNrnWGA8s32IIQ
+id: spin_resource
+plugin_id: toolkit_spins_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth

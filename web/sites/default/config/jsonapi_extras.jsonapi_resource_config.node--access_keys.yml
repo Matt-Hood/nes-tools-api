@@ -10,7 +10,7 @@ third_party_settings:
   jsonapi_defaults:
     page_limit: 50
 id: node--access_keys
-disabled: true
+disabled: false
 path: access_keys
 resourceType: access_keys
 resourceFields:
