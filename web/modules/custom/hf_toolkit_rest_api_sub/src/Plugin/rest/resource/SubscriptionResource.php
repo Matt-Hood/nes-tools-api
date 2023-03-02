@@ -26,11 +26,20 @@ class SubscriptionResource extends ResourceBase {
    *   The resource response.
    */
   public function get($access_key = ''): ResourceResponse {
+    // Set default timezone to UTC.
+    date_default_timezone_set('UTC');
+
     // @todo Look into seeing if I can load/match the access key here with a public method from Drupal
     $all_access_keys = \Drupal::entityTypeManager()
       ->getStorage('node')
       ->loadByProperties([
         'status' => '1',
+        'type' => 'access_keys',
+      ]);
+    $redeemed_access_keys = \Drupal::entityTypeManager()
+      ->getStorage('node')
+      ->loadByProperties([
+        'status' => '0',
         'type' => 'access_keys',
       ]);
 
@@ -48,7 +57,7 @@ class SubscriptionResource extends ResourceBase {
       the array so that it will spit out exactly the XML we want
        */
 
-      // @todo improve speed of search
+      // Active Keys Loop.
       foreach ($all_access_keys as $key) {
         $account = User::load($uid);
         $valid_access_key = '';
@@ -123,6 +132,94 @@ class SubscriptionResource extends ResourceBase {
               // After access key is found exit the loop and return.
               break;
             }
+            if ($user_hwid != $hwid) {
+              $access_key_data = [
+                "key" => 'HWID Access Denied',
+                "value" => 'HWID Access Denied',
+                "expiration" => 'HWID Access Denied',
+                "hwid_access" => 'HWID Access Denied',
+              ];
+
+            }
+          }
+        }
+      }
+
+      // Redeemed Keys Loop.
+      foreach ($redeemed_access_keys as $key) {
+        $account = User::load($uid);
+        $valid_access_key = '';
+        $user_hwid = $hwid;
+        $hwid_set = FALSE;
+        if (!is_null($key->get('field_subscription_type')->referencedEntities()[0])) {
+          $valid_access_key = $key->get('field_subscription_type')->referencedEntities()[0]->getName() ?? '';
+        }
+        if (!is_null($account->get('field_hwid')->value)) {
+          $user_hwid = $account->get('field_hwid')->value;
+          $hwid_set = TRUE;
+        }
+
+        if ($valid_access_key == 'HF Toolkit Subscription Time') {
+          $valid_key = $key->get('field_access_key_')->getValue();
+
+          if ($valid_key[0]['value'] == $access_key) {
+            $expiration_date_number = '0';
+            switch ($valid_key[0]['key']) {
+              case 'Month Key':
+                $expiration_date_number = '30';
+                break;
+
+              case 'Week Key':
+                $expiration_date_number = '7';
+                break;
+
+              case 'Day Key':
+                $expiration_date_number = '1';
+                break;
+
+              default:
+                $expiration_date_number = '1';
+            }
+            // $expire_date[0]["value"]
+            $expire_date = $account->get('field_key_expiration')->getValue();
+            $expire_date_formatted = $expire_date[0]["value"];
+            $current_date = date("Y-m-d\TH:i:s");
+            if ($current_date > $expire_date_formatted) {
+
+              if ($user_hwid == $hwid) {
+                if (!$hwid_set) {
+                  $account->set('field_hwid', $hwid);
+                  $account->save();
+                }
+                $access_key_data = [
+                  "key" => $valid_key[0]['key'],
+                  "value" => $valid_key[0]['value'],
+                  "status" => 'expired key',
+                  "expiration" => $expire_date,
+                ];
+
+                // After access key is found exit the loop and return.
+                break;
+              }
+            }
+            else {
+              if ($user_hwid == $hwid) {
+                if (!$hwid_set) {
+                  $account->set('field_hwid', $hwid);
+                  $account->save();
+                }
+
+                $access_key_data = [
+                  "key" => $valid_key[0]['key'],
+                  "value" => $valid_key[0]['value'],
+                  "status" => 'active key',
+                  "expiration" => $expire_date,
+                ];
+
+                // After access key is found exit the loop and return.
+                break;
+              }
+            }
           }
         }
       }
@@ -135,6 +232,7 @@ class SubscriptionResource extends ResourceBase {
         'redeemed' => $redeem_date ?? '',
         'hwid access' => 'Access Granted',
         'key expiration' => $access_key_data["expiration"],
+        'status' => $access_key_data["status"] ?? 'First Time Use',
       ];
     }
     else {
