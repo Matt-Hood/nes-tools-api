@@ -195,7 +195,7 @@ class SubscriptionResource extends ResourceBase {
                   "key" => $valid_key[0]['key'],
                   "value" => $valid_key[0]['value'],
                   "status" => 'expired key',
-                  "expiration" => $expire_date,
+                  "expiration" => 'expired',
                 ];
 
                 // After access key is found exit the loop and return.
@@ -226,14 +226,26 @@ class SubscriptionResource extends ResourceBase {
     }
 
     if (!empty($access_key_data)) {
-      $response = [
-        'message' => 'Successfully redeemed accesss key' . ' ' . $access_key_data["value"],
-        'subscription' => $access_key_data["key"],
-        'redeemed' => $redeem_date ?? '',
-        'hwid access' => 'Access Granted',
-        'key expiration' => $access_key_data["expiration"],
-        'status' => $access_key_data["status"] ?? 'First Time Use',
-      ];
+      if ($access_key_data["expiration"] == 'expired') {
+        $response = [
+          'message' => 'Successfully redeemed accesss key' . ' ' . $access_key_data["value"],
+          'subscription' => $access_key_data["key"],
+          'redeemed' => $redeem_date ?? '',
+          'hwid access' => 'Access Granted',
+          'status' => $access_key_data["status"] ?? 'First Time Use',
+        ];
+      }
+      else {
+        $response = [
+          'message' => 'Successfully redeemed accesss key' . ' ' . $access_key_data["value"],
+          'subscription' => $access_key_data["key"],
+          'redeemed' => $redeem_date ?? '',
+          'hwid access' => 'Access Granted',
+          'key expiration' => $access_key_data["expiration"],
+          'status' => $access_key_data["status"] ?? 'First Time Use',
+        ];
+      }
+
     }
     else {
       $response = ['message' => 'invalid key'];
