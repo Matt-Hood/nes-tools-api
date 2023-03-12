@@ -1,0 +1,20 @@
+uuid: 643531b9-65a6-40b4-80bf-f17e620b147b
+langcode: en
+status: true
+dependencies:
+  module:
+    - restfullogger
+    - serialization
+    - user
+_core:
+  default_config_hash: XiL17tRUkW9Mvk7Qtpxfui3hP56QDEK0FAg1b8Vl5ys
+id: restfullogger
+plugin_id: restfullogger
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - cookie

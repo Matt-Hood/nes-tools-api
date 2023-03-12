@@ -315,6 +315,47 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_access_key__value:
+          id: field_access_key__value
+          table: node__field_access_key_
+          field: field_access_key__value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: string
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_access_key__value_op
+            label: 'Access Key'
+            description: ''
+            use_operator: false
+            operator: field_access_key__value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_access_key__value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              anonymous: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
         type:
           id: type
           table: node_field_data

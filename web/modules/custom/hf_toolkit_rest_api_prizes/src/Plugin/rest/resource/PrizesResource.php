@@ -117,8 +117,10 @@ class PrizesResource extends ResourceBase {
     }
 
     if (!empty($access_prize_data)) {
+
       $filler = array_fill(0, 1000, array_fill(0, 10, 0));
       $diluated_prizes = array_merge($filler, $access_prize_data);
+
       shuffle($diluated_prizes);
       $prize_won = array_rand($diluated_prizes);
       if (!is_null($diluated_prizes[$prize_won]['name'])) {

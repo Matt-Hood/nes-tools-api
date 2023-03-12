@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ebb075a1480bbc26a71b7f33de11ac14",
+    "content-hash": "379bbf1117ef1a3ac28f8bcbb0050946",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4768,6 +4768,50 @@
             "homepage": "https://www.drupal.org/project/rest_log",
             "support": {
                 "source": "https://git.drupalcode.org/project/rest_log"
+            }
+        },
+        {
+            "name": "drupal/restfullogger",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/restfullogger.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/restfullogger-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "d1444d3d3ad7083af799f46c46b59e3a571e93c4"
+            },
+            "require": {
+                "drupal/core": ">=8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1665585883",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "rymcveigh",
+                    "homepage": "https://www.drupal.org/user/512894"
+                }
+            ],
+            "description": "This module provides a REST resource for logging messages.",
+            "homepage": "https://www.drupal.org/project/restfullogger",
+            "support": {
+                "source": "https://git.drupalcode.org/project/restfullogger"
             }
         },
         {

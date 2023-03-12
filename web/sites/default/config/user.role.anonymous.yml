@@ -6,14 +6,14 @@ dependencies:
     - rest.resource.demo_resource
     - rest.resource.prize_resource
     - rest.resource.redeem_resource
+    - rest.resource.restfullogger
     - rest.resource.spin_resource
     - rest.resource.toolkit_resource
     - rest.resource.user_registration
   module:
     - media
     - rest
-    - search_api_page
-    - system
+    - restfullogger
 _core:
   default_config_hash: mQxaSOS-Kxu1J4zTQxGmhYXvY1Z9t-ewPQDo5m06b20
 id: anonymous
@@ -21,16 +21,15 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access content'
-  - 'access user profiles'
+  - 'post log messages'
   - 'restful get access_key_resource'
   - 'restful get hft_prize_resource'
   - 'restful get redeem_spin_resource'
   - 'restful get spins_resource'
   - 'restful get toolkit_sub_resource'
+  - 'restful post restfullogger'
   - 'restful post user_registration'
   - 'view media'
-  - 'view search api pages'
   - 'view terms in authors'
   - 'view terms in resource'
   - 'view terms in tags'

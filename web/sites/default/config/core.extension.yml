@@ -126,6 +126,7 @@ module:
   responsive_image: 0
   rest: 0
   rest_log: 0
+  restfullogger: 0
   restui: 0
   scheduler: 0
   search_api: 0

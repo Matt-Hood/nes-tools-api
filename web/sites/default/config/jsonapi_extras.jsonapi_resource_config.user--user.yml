@@ -128,31 +128,31 @@ resourceFields:
     enhancer:
       id: ''
   field_hwid:
-    disabled: false
+    disabled: true
     fieldName: field_hwid
     publicName: field_hwid
     enhancer:
       id: ''
   field_key_bindings:
-    disabled: false
+    disabled: true
     fieldName: field_key_bindings
     publicName: field_key_bindings
     enhancer:
       id: ''
   field_key_expiration:
-    disabled: false
+    disabled: true
     fieldName: field_key_expiration
     publicName: field_key_expiration
     enhancer:
       id: ''
   field_redeemed_keys:
-    disabled: false
+    disabled: true
     fieldName: field_redeemed_keys
     publicName: field_redeemed_keys
     enhancer:
       id: ''
   field_spin_balance:
-    disabled: false
+    disabled: true
     fieldName: field_spin_balance
     publicName: field_spin_balance
     enhancer:

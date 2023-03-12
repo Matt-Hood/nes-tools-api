@@ -31,6 +31,7 @@
         "drupal/jsonapi_extras": "^3.20",
         "drupal/key_value_field": "^1.2",
         "drupal/rest_log": "^2.0",
+        "drupal/restfullogger": "^2.0",
         "drupal/restui": "^1.20",
         "drush/drush": "^11.0",
         "mediacurrent/mis_profile": "^2.0",
