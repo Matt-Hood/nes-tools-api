@@ -9,61 +9,18 @@ dependencies:
     - field.field.user.user.field_redeemed_keys
     - field.field.user.user.field_spin_balance
   module:
-    - datetime
-    - key_value_field
     - user
 id: user.user.default
 targetEntityType: user
 bundle: user
 mode: default
-content:
-  field_hwid:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 9
-    region: content
-  field_key_bindings:
-    type: key_value
-    label: above
-    settings:
-      value_only: false
-    third_party_settings: {  }
-    weight: 6
-    region: content
-  field_key_expiration:
-    type: datetime_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: medium
-    third_party_settings: {  }
-    weight: 8
-    region: content
-  field_redeemed_keys:
-    type: key_value
-    label: above
-    settings:
-      value_only: false
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  field_spin_balance:
-    type: number_integer
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 7
-    region: content
-  member_for:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
-    region: content
+content: {  }
 hidden:
+  field_hwid: true
+  field_key_bindings: true
+  field_key_expiration: true
+  field_redeemed_keys: true
+  field_spin_balance: true
   langcode: true
+  member_for: true
   search_api_excerpt: true
