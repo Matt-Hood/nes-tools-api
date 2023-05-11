@@ -89,9 +89,6 @@ class SubscriptionResource extends ResourceBase {
               case 'Day Key':
                 $expiration_date_number = '1';
                 break;
-
-              default:
-                $expiration_date_number = '1';
             }
 
             $redeem_date = date_create(date("y-m-d h:i:s"));
@@ -163,24 +160,7 @@ class SubscriptionResource extends ResourceBase {
           $valid_key = $key->get('field_access_key_')->getValue();
 
           if ($valid_key[0]['value'] == $access_key) {
-            $expiration_date_number = '0';
-            switch ($valid_key[0]['key']) {
-              case 'Month Key':
-                $expiration_date_number = '30';
-                break;
 
-              case 'Week Key':
-                $expiration_date_number = '7';
-                break;
-
-              case 'Day Key':
-                $expiration_date_number = '1';
-                break;
-
-              default:
-                $expiration_date_number = '1';
-            }
-            // $expire_date[0]["value"]
             $expire_date = $account->get('field_key_expiration')->getValue();
             $expire_date_formatted = $expire_date[0]["value"];
             $current_date = date("Y-m-d\TH:i:s");
@@ -227,6 +207,15 @@ class SubscriptionResource extends ResourceBase {
 
     if (!empty($access_key_data)) {
       if ($access_key_data["expiration"] == 'expired') {
+        $response = [
+          'message' => 'Successfully redeemed accesss key' . ' ' . $access_key_data["value"],
+          'subscription' => $access_key_data["key"],
+          'redeemed' => $redeem_date ?? '',
+          'hwid access' => 'Access Granted',
+          'status' => $access_key_data["status"] ?? 'First Time Use',
+        ];
+      }
+      if ($access_key_data["expiration"] == 'active') {
         $response = [
           'message' => 'Successfully redeemed accesss key' . ' ' . $access_key_data["value"],
           'subscription' => $access_key_data["key"],

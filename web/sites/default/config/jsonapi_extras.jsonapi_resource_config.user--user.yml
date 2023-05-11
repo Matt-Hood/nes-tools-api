@@ -7,10 +7,10 @@ dependencies:
     - user
 third_party_settings:
   jsonapi_defaults:
-    page_limit: 50
+    page_limit: 1000
 id: user--user
 disabled: false
-path: user/user
+path: M6JeyGD6dYdSSGQ5/Qb4fxHKCgdkrSnP7
 resourceType: user--user
 resourceFields:
   uid:
@@ -56,7 +56,7 @@ resourceFields:
     enhancer:
       id: ''
   mail:
-    disabled: true
+    disabled: false
     fieldName: mail
     publicName: mail
     enhancer:

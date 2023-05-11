@@ -36,6 +36,7 @@ module:
   geolocation: 0
   geolocation_address: 0
   geolocation_leaflet: 0
+  ghost: 0
   ghost_rest_api: 0
   gin_toolbar: 0
   google_analytics: 0
